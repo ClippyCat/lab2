@@ -68,7 +68,7 @@ const createRoutes = (app) => {
             res.status(200);
             res.json({
                 message: 'The username and password is correct.',
-                uuid
+                token: uuid
             });
         } else {
             res.status(401);

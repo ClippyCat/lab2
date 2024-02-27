@@ -35,8 +35,8 @@ const performLogin = async (username, password) => {
 
         const data = await response.json();
 
-        if (response.ok && data.message === 'The username and password is correct.') {
-            const token = data.token;
+        if (response.ok && data.uuid) {
+            const token = data.uuid;
             return { token };
         } else {
             throw new Error(data.message || 'Authentication failed');
